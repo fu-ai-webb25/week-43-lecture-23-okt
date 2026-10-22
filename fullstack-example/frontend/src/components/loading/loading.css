@@ -1,0 +1,33 @@
+.loading {
+    display: flex;
+    gap: .5rem;
+    align-items: center;
+    width: fit-content;
+    padding: 1rem 1.25rem;
+    background-color: #f1f0f0;
+    border-radius: 1.5rem;
+
+    .loading__dot {
+        width: .6rem;
+        aspect-ratio: 1;
+        background-color: #777;
+        border-radius: 50%;
+        animation: bounce 1s infinite alternate;
+    }
+
+    .loading__dot:nth-child(2) {
+        animation-delay: .2s;
+    }
+    .loading__dot:nth-child(3) {
+        animation-delay: .4s;
+    }
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-.4rem);
+    }
+}
